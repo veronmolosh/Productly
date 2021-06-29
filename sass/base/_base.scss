@@ -1,0 +1,53 @@
+html {
+	font-size: 10px;
+}
+
+body {
+	@include font($size: 1.6rem, $height: 2.6rem, $weight: normal);
+	@extend %font-prim;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5 {
+	color: $color-heading;
+}
+
+h1 {
+	overflow: hidden;
+	z-index: -10;
+	height: 1px;
+	width: 1px;
+	margin: 0;
+	padding: 0;
+	position: absolute;
+	clip-path: inset(0px 0px 99.9% 99.9%);
+}
+
+h2 {
+	@extend %font-add;
+	@include font(4.4rem, 5.4rem, bold, normal);
+}
+
+h3 {
+	@include font(3.4rem, 4.6rem, bold, normal);
+}
+
+h4 {
+	@include font(2.4rem, 3.4rem, bold, normal);
+}
+
+h5 {
+	@include font(2.2rem, 3rem, 600, normal);
+}
+
+h6 {
+	@include font(1.6rem, 2.6rem, bold, normal);
+}
+
+.block-shadowed {
+	box-shadow: 0 4px 20px rgba(0, 0, 0, 0.05);
+	border-radius: 10px;
+}
