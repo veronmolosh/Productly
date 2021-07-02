@@ -16,9 +16,32 @@
 .tools__button {
 	margin-top: 60px;
 	text-align: center;
+	@include media-mobile {
+		margin-top: 0;
+	}
 }
 
 //Tool block
+.tool-container {
+	@include media-tablet {
+		flex-wrap: wrap;
+		> .tool {
+			flex-basis: 43%;
+		}
+	}
+
+	@include media-mobile {
+		flex-basis: 100%;
+		margin-bottom: 47px;
+	}
+}
+
+.tool {
+	@include media-tablet {
+		text-align: center;
+	}
+}
+
 .tool__title {
 	margin: 0 0 16px;
 }
